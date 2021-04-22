@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Page Title -->
-    <title>My Dung </title>
+    <title>Văn Mỹ & Phương Dung </title>
 
     <!-- Favicon and Touch Icons -->
     <link href="images/favicon/favicon.png" rel="shortcut icon" type="image/png">
@@ -58,15 +58,20 @@
             </div>
         </div>
         <!-- end preloader -->
-        <audio src="./Beautiful-In-White-Shayne-Ward-Shayne-Ward.mp3"></audio>
-        <script>
-            window.addEventListener("DOMContentLoaded", event => {
-                const audio = document.querySelector("audio");
-                audio.volume = 0.2;
-                audio.play();
-            });
-        </script>
+        <audio id="myAudio" controls autoplay>
+            <source src="./Beautiful-In-White-Shayne-Ward-Shayne-Ward.mp3" type="audio/mpeg">
+        </audio>
 
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(event) {
+                $("#myAudio").hide();
+                var x = document.getElementById("myAudio");
+                // x.style.display = 'none';
+                x.autoplay = true;
+                x.load();
+            });
+          </script>
+        <!-- <audio src="./Beautiful-In-White-Shayne-Ward-Shayne-Ward.mp3"></audio> -->
         <!-- start of hero -->
         <section class="hero">
             <div class="hero-slider hero-slider-s1">
@@ -857,6 +862,8 @@
     ================================================== -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/modify.js"></script>
+
 
     <!-- Plugins for this template -->
     <script src="js/jquery-plugin-collection.js"></script>
